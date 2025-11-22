@@ -199,7 +199,7 @@ symbol = " "
 symbol = " "
 
 [kubernetes]
-disabled = false
+disabled = true
 format = '[$symbol $context ]($style)'
 symbol = ""
 style = "blue"
