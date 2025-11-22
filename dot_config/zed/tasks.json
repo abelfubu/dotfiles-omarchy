@@ -1,0 +1,45 @@
+[
+  {
+    "reveal_target": "center",
+    "show_command": false,
+    "show_summary": false,
+    "label": "Jest: Run Current File with coverage",
+    "command": "npx jest \"$ZED_FILENAME\" --coverage --collectCoverageFrom \"**/$(\"$ZED_STEM\" -replace '\\.spec$').ts\""
+  },
+  {
+    "label": "Run HTTP Request",
+    "command": "httpyac",
+    "args": ["send", "--line", "$ZED_ROW", "$ZED_FILE"],
+    "tags": ["http-request"],
+    "reveal_target": "center",
+    "show_command": false,
+    "show_summary": false
+  },
+  {
+    "label": "Run All HTTP Requests",
+    "command": "httpyac",
+    "args": ["send", "$ZED_FILE"],
+    "tags": ["http-request"],
+    "reveal_target": "center",
+    "show_command": false,
+    "show_summary": false
+  },
+  {
+    "label": "JSON from Clipboard to TS",
+    "command": "wl-paste | quicktype --lang ts --just-types --top-level Root | wl-copy",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": true,
+    "hide": "always",
+    "shell": "system",
+    "tags": ["json", "typescript"]
+  },
+  {
+    "label": "JSON Clipboard to Zod",
+    "command": "wl-paste | quicktype --lang typescript-zod --top-level Schema | wl-copy",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": true,
+    "hide": "always",
+    "shell": "system",
+    "tags": ["json", "zod", "typescript"]
+  }
+]

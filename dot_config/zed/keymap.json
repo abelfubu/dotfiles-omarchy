@@ -1,0 +1,79 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-1": ["workspace::ActivatePane", 0],
+      "ctrl-2": ["workspace::ActivatePane", 1]
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      // "z": "project_panel::CollapseAllEntries"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "ctrl-a": "editor::AcceptEditPrediction",
+      "ctrl-s": "workspace::Save"
+    }
+  },
+  {
+    "context": "(Editor && vim_mode == visual) || (Editor && vim_mode == normal)",
+    "bindings": {
+      "<": "editor::Outdent",
+      ">": "editor::Indent"
+    }
+  },
+  {
+    "context": "VimControl",
+    "bindings": {
+      // Debugging
+      "space d c": "debugger::FocusConsole",
+
+      // Projects
+      "space p p": "projects::OpenRecent",
+
+      // Docks
+      "space d d": "workspace::ToggleRightDock",
+
+      // Panes
+      "space b o": "pane::CloseOtherItems",
+
+      // Git
+      "space g c": "git::Commit",
+      "space g a": "git::Add",
+      "space g p": "git::Pull",
+      "space g P": "git::Push",
+      "space g f": "git::Fetch",
+      "space g s": "git::Switch",
+      "space g h d": "editor::ToggleSelectedDiffHunks",
+      "space g h r": "git::Restore",
+
+      // Tasks
+      "space t t": [
+        "task::Spawn",
+        { "task_name": "Jest: Run Current File with coverage" }
+      ]
+    }
+  },
+  {
+    "context": "Terminal && !Dock",
+    "bindings": {
+      "m": "terminal::ToggleViMode",
+      "q": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "ProjectPanel || CollabPanel || OutlinePanel || ChatPanel || VimControl || EmptyPane || SharedScreen || MarkdownPreview || KeyContextView || GitPanel || Terminal",
+    "bindings": {
+      "shift-l": "pane::ActivateNextItem",
+      "shift-h": "pane::ActivatePreviousItem",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  }
+]

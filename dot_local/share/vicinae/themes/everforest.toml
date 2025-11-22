@@ -1,0 +1,149 @@
+# Example Theme Configuration
+# This file demonstrates all available theme configuration options for Vicinae.
+# You don't need to define all of these - only override what you want to customize.
+# Undefined colors will be automatically derived from core colors or inherited from base themes.
+#
+# Where a color name is expected, you can use the following hex formats:
+# #RGB
+# #RRGGBB
+# #AARRGGBB (with alpha)
+# 'transparent' (no color)
+# <color_ref> (e.g 'colors.accents.red'): references this theme's definition if available, the parent's otherwise
+#
+# Where a color is expected, you can either use a simple string for the color name or the following table syntax:
+# [colors.core]
+# accent = "accents.color.red"
+# OR:
+# accent = { name = "accents.color.red", opacity = 0.5 }
+# OR:
+# accent = { name = "accents.color.red", lighter = 100 }
+# OR:
+# accent = { name = "accents.color.red", darker = 150 }
+
+[meta]
+name = "Everforest Dark"                         # Display name shown in theme picker
+description = "Everforerst Dark theme for Vicinae"  # Description shown in theme picker
+variant = "dark"                              # Theme variant: "dark" or "light". Every dark theme inherits from vicinae-dark and every light theme from vicinae-light. 
+inherits = "vicinae-dark"                     # Optional: inherit from another theme (e.g., "vicinae-dark")
+icon = "icons/theme-name.png"                 # Optional: path to theme icon (relative to the theme directory it is placed in if not an absolute path)
+
+# ============================================================================
+# Core Colors
+# ============================================================================
+# These are the most important colors that define your theme's overall look.
+# Most other colors can be automatically derived from these if not specified.
+
+[colors.core]
+accent = "#7FBBB3"              # Primary accent color (used for input borders, text selection background...)
+accent_foreground = "#D3C6AA"   # Text color on accent-colored backgrounds
+background = "#272E33"          # Main application background
+foreground = "#D3C6AA"          # Primary text color
+secondary_background = "#2E383C" # Background for surfaces elevated above main (popups, tooltips, panels)
+border = "#374145"              # Default border color throughout the UI
+
+# ============================================================================
+# Window-Specific Colors
+# ============================================================================
+# Override border colors for specific window types
+
+[colors.main_window]
+border = "#374145"
+
+[colors.settings_window]
+border = "#374145"
+
+# ============================================================================
+# Accent Colors
+# ============================================================================
+# Your color palette, central to your theme's identity
+
+[colors.accents]
+blue = "#7FBBB3"
+green = "#A7C080"
+magenta = "#D699B6"
+orange = "#E69875"
+red = "#E67E80"
+yellow = "#DBBC7F"
+cyan = "##83C092"
+purple = "#D699B6"
+
+# ============================================================================
+# Text Colors
+# ============================================================================
+# Colors for various text states and meanings
+
+[colors.text]
+default = "#D3C6AA"             # Usually same as core.foreground
+muted = "#D3C6AA"               # Secondary text: hints, less important info
+danger = "#E67E80"              # Errors or warnings
+success = "#A7C080"             # Success or positive states
+placeholder = "#D3C6AA"			# input placeholder, search placeholder...
+selection = { background = "#7FBBB3", foreground = "#D3C6AA" }
+
+[colors.text.links]
+default = "#7FBBB3"
+visited = "#D699B6"
+
+# ============================================================================
+# Input Fields
+# ============================================================================
+# Colors for text inputs, search boxes, etc.
+
+[colors.input]
+border = "#374145"
+border_focus = "#7FBBB3"
+border_error = "#E67E80"
+
+# ============================================================================
+# Buttons
+# ============================================================================
+# Colors for button states
+
+[colors.button.primary]
+background = "#374145"
+foreground = "#D3C6AA"
+hover = { background = "#bb2e2e2e" }
+focus = { outline = "colors.core.accent" }
+
+# ============================================================================
+# Lists
+# ============================================================================
+# Colors for list items (horizontal list views)
+
+[colors.list.item.hover]
+background = "#374145"
+foreground = "#D3C6AA"
+
+[colors.list.item.selection]
+background = "#374145"          # Selected item on main background
+foreground = "#D3C6AA"
+secondary_background = "#374145" # Selected item on secondary surfaces (popups, panels)
+                                 # Light themes: lighter than primary selection
+                                 # Dark themes: lighter/brighter than primary selection
+secondary_foreground = "#D3C6AA"
+
+# ============================================================================
+# Grid Items
+# ============================================================================
+# Colors for grid-based layouts (icon grids, tiles, etc.)
+
+[colors.grid.item]
+background = "#2E383C"
+hover = { outline = "#D3C6AA" }
+selection = { outline = "#D3C6AA" }
+
+# ============================================================================
+# Scrollbars
+# ============================================================================
+
+[colors.scrollbars]
+background = "#374145"
+
+# ============================================================================
+# Loading Indicators
+# ============================================================================
+
+[colors.loading]
+bar = "#D3C6AA"     # shown right below the search bar when something is loading
+spinner = "#D3C6AA" # used by dynamic toasts
+

@@ -1,0 +1,143 @@
+@import "../omarchy/current/theme/waybar.css";
+
+@define-color red #EF7E7E;
+
+* {
+    font-size: 12.5px;
+    margin: 2px;
+}
+
+window#waybar {
+    background-color: @background;
+    /* background-color: transparent; */
+    color: @foreground;
+    border-radius: 4px;
+    font-family: 'CommitMono Nerd Font';
+    font-weight: 300;
+}
+
+#mpris,
+#clock,
+#temperature,
+#cava,
+#cpu,
+#backlight,
+#memory,
+#custom-omarchy,
+#battery,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#language,
+#custom-udpate,
+#tray,
+#bluetooth {
+    padding: 0px 12px;
+    border-radius: 4px;
+    font-size: 12.5px;
+}
+
+#custom-expand-icon {
+    padding: 2px 12px;
+    margin: 0px;
+    border-radius: 4px;
+}
+
+#custom-omarchy {
+    color: #90d05a;
+}
+
+#workspaces {
+    border-radius: 4px;
+    margin: 0px;
+}
+
+#workspaces button {
+    padding: 0 4px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button.active {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#workspaces button.urgent {
+    background: rgba(255, 255, 255, 0.05);
+    color: @red;
+}
+
+#workspaces button.empty {
+    color: rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button.active {
+    color: #fff;
+    font-weight: 900;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#clock,
+#taskbar button,
+#image,
+#idle_inhibitor,
+#temperature,
+#window,
+#cpu,
+#language,
+#custom-expand-icon,
+#mpris,
+#backlight,
+#bluetooth,
+#memory,
+#network,
+#wireplumber,
+#battery,
+#pulseaudio,
+#custom-omarchy,
+#custom-update,
+#tray {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#taskbar {
+    padding: 8px;
+}
+
+#taskbar button {
+    padding: 1px 0;
+}
+
+
+#window {
+    border-radius: 4;
+    padding: 0 12px;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+#temperature.critical,
+#cpu.critical,
+#memory.critical {
+    color: @red;
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+    color: @red;
+}
+
+#window {
+    min-width: 20px;
+}
+
+#cava {
+    min-width: 20px;
+}
