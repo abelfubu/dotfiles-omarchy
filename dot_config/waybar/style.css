@@ -12,7 +12,7 @@ window#waybar {
     /* background-color: transparent; */
     color: @foreground;
     border-radius: 4px;
-    font-family: 'CommitMono Nerd Font';
+    font-family: 'BerkeleyMono Nerd Font';
     font-weight: 300;
 }
 

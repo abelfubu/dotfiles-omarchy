@@ -3,7 +3,7 @@
     "considerPreedit": false,
     "faviconService": "twenty",
     "font": {
-        "normal": "JetBrainsMono Nerd Font",
+        "normal": "BerkeleyMono Nerd Font",
         "size": 10.5
     },
     "keybinding": "default",

@@ -7,6 +7,8 @@
       "name": "Aether",
       "appearance": "dark",
       "style": {
+        "background": "#141B1E77",
+        "background.appearance": "blurred",
         "vim.normal.background": "#EF7E7E",
         "vim.mode.text": "#141B1E",
         "vim.replace.background": "#DEDDA9",
@@ -14,7 +16,6 @@
         "vim.visual_block.background": "#90C6EE",
         "vim.visual_line.background": "#CF6D6D",
         "vim.insert.background": "#AFD7AC",
-        "background.appearance": "blurred",
         "border": "#212628",
         "border.variant": "#414648",
         "border.focused": "#EF7E7E",
@@ -23,7 +24,6 @@
         "border.disabled": null,
         "elevated_surface.background": "#141B1E",
         "surface.background": "#141B1E",
-        "background": "#141B1E",
         "element.background": "#212628",
         "element.hover": "#212628",
         "element.active": "#515658",
@@ -45,11 +45,11 @@
         "icon.disabled": null,
         "icon.placeholder": null,
         "icon.accent": null,
-        "status_bar.background": "#141B1E",
-        "title_bar.background": "#141B1E",
-        "title_bar.inactive_background": "#141B1E",
+        "status_bar.background": "#141B1ECC",
+        "title_bar.background": "#141B1ECC",
+        "title_bar.inactive_background": "#141B1ECC",
         "toolbar.background": "#141B1E",
-        "tab_bar.background": "#141B1E",
+        "tab_bar.background": "#141B1ECC",
         "tab.inactive_background": "#141B1E",
         "tab.active_background": "#212628",
         "search.match_background": "#141B1E",
@@ -62,8 +62,8 @@
         "scrollbar.track.background": "#141B1E",
         "scrollbar.track.border": null,
         "editor.foreground": "#efefef",
-        "editor.background": "#141B1E",
-        "editor.gutter.background": "#141B1E",
+        "editor.background": "#141B1ECC",
+        "editor.gutter.background": "#141B1ECC",
         "editor.subheader.background": "#141B1E",
         "editor.active_line.background": "#141B1E",
         "editor.highlighted_line.background": null,
@@ -189,7 +189,7 @@
             "color": "#F4D67A"
           },
           "keyword": {
-            "color": "#CF6D6D"
+            "color": "#EF7E7E"
           },
           "label": {
             "color": "#DEDDA9",

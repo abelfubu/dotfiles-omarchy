@@ -27,9 +27,10 @@
     "format": "{title}",
     "rewrite": {
       "(.*) - Brave": "🌍 $1",
+      "(.*) - Youtube": "📺 $1",
       "nvim (.*)": " $1",
       "(.*) - mpv": "🎥 $1",
-      "abelfubu@home:(.*)": "💻 $1",
+      "abelfubu@home:(.*)": "💻 $1"
     },
   },
   "hyprland/workspaces": {
@@ -83,7 +84,13 @@
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
   },
   "network": {
-    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
     "format": "{icon}",
     "format-wifi": "{icon}",
     "format-ethernet": "󰀂",
@@ -101,8 +108,30 @@
     "format-charging": "{icon}",
     "format-plugged": "",
     "format-icons": {
-      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
-      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ],
     },
     "format-full": "󰂅",
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
@@ -117,6 +146,7 @@
   "bluetooth": {
     "format": "󰂯",
     "format-disabled": "󰂲",
+    "format-off": "󰂲",
     "format-connected": "󰂯",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "omarchy-launch-bluetooth",
@@ -129,7 +159,11 @@
     "scroll-step": 5,
     "format-muted": "",
     "format-icons": {
-      "default": ["", "", ""],
+      "default": [
+        "",
+        "",
+        ""
+      ],
     },
   },
   "group/tray-expander": {
@@ -138,7 +172,10 @@
       "transition-duration": 600,
       "children-class": "tray-group-item",
     },
-    "modules": ["custom/expand-icon", "tray"],
+    "modules": [
+      "custom/expand-icon",
+      "tray"
+    ],
   },
   "custom/expand-icon": {
     "format": "",
