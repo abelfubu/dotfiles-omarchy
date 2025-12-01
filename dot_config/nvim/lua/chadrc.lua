@@ -1,16 +1,17 @@
 local M = {}
 
 M.base46 = {
-  theme = "pastelbeans",
-  transparency = true,
+	theme = "onedark",
+	transparency = true,
+	theme_toggle = { "onedark", "one_light" },
 }
 
 M.ui = {
-  statusline = {
-    theme = "default",
-    separator_style = "round",
-  },
-  lsp = { signature = false },
+	statusline = {
+		theme = "default",
+		separator_style = "round",
+	},
+	lsp = { signature = false },
 }
 
 -- Set Undercurl Highlighting

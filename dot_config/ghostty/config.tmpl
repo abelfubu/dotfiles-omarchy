@@ -2,7 +2,7 @@
 config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 
 # Font
-font-family = "BerkeleyMono Nerd Font"
+font-family = {{ .font }}
 font-style = Regular
 font-size = 13
 adjust-cell-height = 27%
@@ -33,3 +33,5 @@ keybind = super+control+shift+alt+arrow_right=resize_split:right,100
 
 # Slowdown mouse scrolling
 mouse-scroll-multiplier = 0.95
+
+theme = dark:Catppuccin Frappe,light:Catppuccin Latte

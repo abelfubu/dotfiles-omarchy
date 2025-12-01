@@ -6,10 +6,7 @@
     },
     "default_width": 500
   },
-  "buffer_font_family": "BerkeleyMono Nerd Font",
-  // "buffer_font_features": {
-  //   "ss00": true
-  // },
+  "buffer_font_family": "{{ .font }}",
   "buffer_font_size": 18,
   "buffer_font_weight": 300,
   "cursor_blink": false,
@@ -47,12 +44,15 @@
   "scrollbar": {
     "show": "never"
   },
-  "theme": "Aether",
+  "theme": {
+    "dark": "Nordfox - opaque",
+    "light": "Dawnfox - opaque"
+  },
   "toolbar": {
     "quick_actions": false,
     "breadcrumbs": true
   },
-  "ui_font_family": "BerkeleyMono Nerd Font",
+  "ui_font_family": "{{ .font }}",
   "ui_font_size": 18,
   "ui_font_weight": 300,
   "vim_mode": true
