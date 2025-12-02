@@ -1,9 +1,9 @@
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
+	theme = "one_light",
 	transparency = true,
-	theme_toggle = { "onedark", "one_light" },
+	theme_toggle = { "pastelbeans", "one_light" },
 }
 
 M.ui = {

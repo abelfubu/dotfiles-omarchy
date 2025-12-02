@@ -1,59 +1,41 @@
 {
   "agent": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4.1"
-    },
+    "default_model": { "provider": "copilot_chat", "model": "gpt-4.1" },
     "default_width": 500
   },
   "buffer_font_family": "{{ .font }}",
   "buffer_font_size": 18,
   "buffer_font_weight": 300,
   "cursor_blink": false,
-  "features": {
-    "edit_prediction_provider": "copilot"
-  },
-  "git_panel": {
-    "dock": "right",
-    "default_width": 500
-  },
+  "features": { "edit_prediction_provider": "copilot" },
+  "format_on_save": "on",
+  "git_panel": { "dock": "right", "default_width": 500 },
   "hide_mouse": "on_typing_and_movement",
-  "icon_theme": "Catppuccin Mocha",
-  "outline_panel": { "dock": "right" },
+  "icon_theme": { "dark": "Catppuccin Mocha", "light": "Catppuccin Latte" },
   "indent_guides": { "enabled": false },
+  "outline_panel": { "dock": "right" },
   "preview_tabs": { "enabled": true },
-  "use_system_prompts": false,
-  "tab_bar": {
-    "show_nav_history_buttons": false,
-    "show": true,
-    "show_tab_bar_buttons": false
-  },
   "project_panel": {
     "dock": "right",
     "auto_fold_dirs": false,
     "indent_size": 16,
     "sticky_scroll": false,
-    "indent_guides": {
-      "show": "never"
-    },
+    "indent_guides": { "show": "never" },
     "starts_open": true,
     "default_width": 500
   },
-  "format_on_save": "on",
   "relative_line_numbers": "enabled",
-  "scrollbar": {
-    "show": "never"
+  "scrollbar": { "show": "never" },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show": true,
+    "show_tab_bar_buttons": false
   },
-  "theme": {
-    "dark": "Nordfox - opaque",
-    "light": "Dawnfox - opaque"
-  },
-  "toolbar": {
-    "quick_actions": false,
-    "breadcrumbs": true
-  },
-  "ui_font_family": "{{ .font }}",
+  "theme": { "dark": "Iceberg", "light": "One Light" },
+  "toolbar": { "quick_actions": false, "breadcrumbs": true },
+  "ui_font_family": "DankMono Nerd Font Mono",
   "ui_font_size": 18,
   "ui_font_weight": 300,
+  "use_system_prompts": false,
   "vim_mode": true
 }
