@@ -1,9 +1,9 @@
 local M = {}
 
 M.base46 = {
-	theme = "one_light",
+	theme = "github_light",
 	transparency = true,
-	theme_toggle = { "pastelbeans", "one_light" },
+	theme_toggle = { "pastelbeans", "github_light" },
 }
 
 M.ui = {
@@ -12,6 +12,11 @@ M.ui = {
 		separator_style = "round",
 	},
 	lsp = { signature = false },
+	tabufline = {
+		enabled = true,
+		lazyload = true,
+		tabufline_style = "default",
+	},
 }
 
 -- Set Undercurl Highlighting

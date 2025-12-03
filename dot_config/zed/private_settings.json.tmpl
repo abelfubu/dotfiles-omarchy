@@ -24,6 +24,7 @@
     "starts_open": true,
     "default_width": 500
   },
+  "show_whitespaces": "trailing",
   "relative_line_numbers": "enabled",
   "scrollbar": { "show": "never" },
   "tab_bar": {
@@ -31,11 +32,42 @@
     "show": true,
     "show_tab_bar_buttons": false
   },
-  "theme": { "dark": "Iceberg", "light": "One Light" },
+  "theme": { "dark": "Abelfubu - Red", "light": "One Light" },
   "toolbar": { "quick_actions": false, "breadcrumbs": true },
-  "ui_font_family": "DankMono Nerd Font Mono",
+  "ui_font_family": "{{ .font }}",
   "ui_font_size": 18,
   "ui_font_weight": 300,
+  "unstable.ui_density": "compact",
   "use_system_prompts": false,
-  "vim_mode": true
+  "vim_mode": true,
+  "theme_overrides": {
+    "One Light": {
+      "vim.normal.background": "#EF7E7E",
+      "vim.mode.text": "#141B1E",
+      "vim.replace.background": "#DEDDA9",
+      "vim.visual.background": "#AFD7AC",
+      "vim.visual_block.background": "#90C6EE",
+      "vim.visual_line.background": "#CF6D6D",
+      "vim.insert.background": "#AFD7AC",
+      "syntax": {
+        "keyword": {
+          "font_style": "italic"
+        }
+      }
+    },
+    "Abelfubu - Red": {
+      "vim.normal.background": "#EF7E7E",
+      "vim.mode.text": "#141B1E",
+      "vim.replace.background": "#DEDDA9",
+      "vim.visual.background": "#AFD7AC",
+      "vim.visual_block.background": "#90C6EE",
+      "vim.visual_line.background": "#CF6D6D",
+      "vim.insert.background": "#AFD7AC",
+      "syntax": {
+        "keyword": {
+          "font_style": "italic"
+        }
+      }
+    }
+  }
 }
