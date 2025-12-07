@@ -1,28 +1,42 @@
 # 🎛️ Abel's Dotfiles (chezmoi) 📦
 
+```text
+         88                          ad88  88  88
+         88                ,d       d8"    ""  88
+         88                88       88         88
+ ,adPPYb,88   ,adPPYba,  MM88MMM  MM88MMM  88  88   ,adPPYba,  ,adPPYba,
+a8"    `Y88  a8"     "8a   88       88     88  88  a8P_____88  I8[    ""
+8b       88  8b       d8   88       88     88  88  8PP"""""""   `"Y8ba,
+"8a,   ,d88  "8a,   ,a8"   88,      88     88  88  "8b,   ,aa  aa    ]8I
+ `"8bbdP"Y8   `"YbbdP"'    "Y888    88     88  88   `"Ybbd8"'  `"YbbdP"'
+```
+
 These configs mirror my macOS/Linux workflow: Zsh + Neovim + tmux + Ghostty + Aerospace/Vicinae + Linux compositor helpers. I keep everything in `chezmoi` so a fresh machine is a single `brew bundle` and `chezmoi apply` away.
 
 ## 1. Install Homebrew (macOS / Linux)
 
-- macOS: run `brew`’s installer:
-  ```sh
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  ```
-  Follow the post-install notes to add Homebrew to your `PATH`.
-- Linux: install prerequisites (example for Debian/Ubuntu) and then reuse the same script:
+macOS: run `brew`’s installer:
 
-  ```sh
-  sudo apt update && sudo apt install build-essential procps curl file git
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  ```
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-  Afterward, source `~/.linuxbrew/bin/brew` (or the path printed by the installer).
+Follow the post-install notes to add Homebrew to your `PATH`.
 
-- Install `chezmoi`:
+Linux: install prerequisites (example for Debian/Ubuntu) and then reuse the same script:
 
-  ```sh
-  brew install chezmoi
-  ```
+```sh
+sudo apt update && sudo apt install build-essential procps curl file git
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Afterward, source `~/.linuxbrew/bin/brew` (or the path printed by the installer).
+
+Install `chezmoi`:
+
+```sh
+brew install chezmoi
+```
 
 ## 2. Configure a fresh machine (macOS & Linux)
 
