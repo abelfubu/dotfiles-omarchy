@@ -11,7 +11,7 @@ after-startup-command = [
   inner.vertical =   32
   outer.left =       32
   outer.bottom =     32
-  outer.top =        32
+  outer.top =        24
   outer.right =      32
 
 [mode.main.binding]
@@ -67,7 +67,7 @@ after-startup-command = [
   r = ['flatten-workspace-tree', 'mode main'] # reset layout
   f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
   backspace = ['close-all-windows-but-current', 'mode main']
-
+  s = ['exec-and-forget screencapture -i -c', 'mode main']
   # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
   #s = ['layout sticky tiling', 'mode main']
 
