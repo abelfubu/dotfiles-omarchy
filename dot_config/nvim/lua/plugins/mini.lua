@@ -1,5 +1,5 @@
 vim.pack.add {
-  { src = "https://github.com/nvim-mini/mini.files" },
+  -- { src = "https://github.com/nvim-mini/mini.files" },
   { src = "https://github.com/nvim-mini/mini.pick" },
   { src = "https://github.com/nvim-mini/mini.pairs" },
   { src = "https://github.com/nvim-mini/mini.icons" },
@@ -8,7 +8,7 @@ vim.pack.add {
   { src = "https://github.com/nvim-mini/mini.surround" },
 }
 
-require("mini.files").setup {}
+-- require("mini.files").setup {}
 require("mini.pick").setup {
   window = {
     config = function()
@@ -100,10 +100,10 @@ vim.keymap.set("n", "<leader>sr", function()
 end, { desc = "Search keymaps" })
 
 -- Mini files
-vim.keymap.set("n", "-", function()
-  local buf_name = vim.api.nvim_buf_get_name(0)
-  local path = vim.fn.filereadable(buf_name) == 1 and buf_name
-    or vim.fn.getcwd()
-  require("mini.files").open(path)
-  require("mini.files").reveal_cwd()
-end, { desc = "Open Mini Files" })
+-- vim.keymap.set("n", "-", function()
+--   local buf_name = vim.api.nvim_buf_get_name(0)
+--   local path = vim.fn.filereadable(buf_name) == 1 and buf_name
+--     or vim.fn.getcwd()
+--   require("mini.files").open(path)
+--   require("mini.files").reveal_cwd()
+-- end, { desc = "Open Mini Files" })
