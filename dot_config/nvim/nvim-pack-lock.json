@@ -29,6 +29,10 @@
       "rev": "6bd29494e3f79ff08be1d35bc1926ed23c22ed9a",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
+    "guttermarks.nvim": {
+      "rev": "aaa67cdd90500a9073ee083bd090788d3ecd88e4",
+      "src": "https://github.com/dimtion/guttermarks.nvim"
+    },
     "kulala.nvim": {
       "rev": "cd3eaa83b8d60533837202dede73238334d71832",
       "src": "https://github.com/mistweaverco/kulala.nvim"

@@ -35,6 +35,9 @@ M.base46 = {
     FormatEnabledSp = { fg = "green", bg = "lightbg" },
     OrganizeImportsEnabled = { bg = "orange", fg = "black2" },
     OrganizeImportsEnabledSp = { fg = "orange", bg = "lightbg" },
+    GutterMarksLocal = { fg = "red" },
+    GutterMarksGlobal = { fg = "green" },
+    GutterMarksSpecial = { fg = "orange" },
   },
 }
 

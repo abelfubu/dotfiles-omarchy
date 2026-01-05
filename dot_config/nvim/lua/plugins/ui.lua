@@ -2,6 +2,7 @@ vim.pack.add { "https://github.com/nvchad/ui" }
 vim.pack.add { "https://github.com/nvim-lua/plenary.nvim" }
 vim.pack.add { "https://github.com/nvchad/base46" }
 vim.pack.add { "https://github.com/nvchad/volt" }
+vim.pack.add { "https://github.com/dimtion/guttermarks.nvim" }
 
 require("base46").load_all_highlights()
 require "nvchad"
