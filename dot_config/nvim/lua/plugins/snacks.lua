@@ -1,6 +1,7 @@
 vim.pack.add { { src = "https://github.com/folke/snacks.nvim" } }
 
 require("snacks").setup {
+  statuscolumn = { enabled = true },
   explorer = {
     replace_netrw = true,
   },
@@ -16,7 +17,7 @@ require("snacks").setup {
         layout = {
           preset = "vscode",
           cycle = false,
-          layout = { position = "float", width = 0.33 },
+          layout = { position = "left", width = 0.33 },
         },
       },
     },

@@ -20,10 +20,13 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.diagnostic.config {
   -- virtual_lines = { current_line = true },
-  virtual_text = true,
-  float = { border = "rounded", focusable = true, auto = true },
+  float = {
+    border = "rounded",
+    focusable = true,
+    auto = true,
+    source = "if_many",
+  },
   severity_sort = true,
-  underline = { severity = { min = vim.diagnostic.severity.HINT } },
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = " ", -- 
@@ -31,6 +34,20 @@ vim.diagnostic.config {
       [vim.diagnostic.severity.HINT] = "󰛩 ", -- 
       [vim.diagnostic.severity.INFO] = "󰙎", -- 
     },
+  },
+  underline = { severity = { min = vim.diagnostic.severity.HINT } },
+  virtual_text = {
+    source = "if_many",
+    spacing = 2,
+    format = function(diagnostic)
+      local diagnostic_message = {
+        [vim.diagnostic.severity.ERROR] = diagnostic.message,
+        [vim.diagnostic.severity.WARN] = diagnostic.message,
+        [vim.diagnostic.severity.INFO] = diagnostic.message,
+        [vim.diagnostic.severity.HINT] = diagnostic.message,
+      }
+      return diagnostic_message[diagnostic.severity]
+    end,
   },
 }
 

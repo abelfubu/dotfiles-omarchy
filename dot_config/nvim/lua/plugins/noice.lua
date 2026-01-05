@@ -1,7 +1,7 @@
-vim.pack.add({ "https://github.com/MunifTanjim/nui.nvim" })
-vim.pack.add({ "https://github.com/folke/noice.nvim" })
+vim.pack.add { "https://github.com/MunifTanjim/nui.nvim" }
+vim.pack.add { "https://github.com/folke/noice.nvim" }
 
-require("noice").setup({
+require("noice").setup {
   presets = {
     lsp_doc_border = true,
     bottom_search = false,
@@ -17,4 +17,4 @@ require("noice").setup({
       size = { width = "auto", height = "auto" },
     },
   },
-})
+}

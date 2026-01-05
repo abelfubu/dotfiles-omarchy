@@ -1,7 +1,8 @@
----@diagnostic disable: param-type-mismatch
+--- @diagnostic disable: param-type-mismatch
 vim.pack.add { { src = "https://github.com/lewis6991/gitsigns.nvim" } }
 
 require("gitsigns").setup {
+  current_line_blame = false,
   on_attach = function(bufnr)
     local gitsigns = require "gitsigns"
 

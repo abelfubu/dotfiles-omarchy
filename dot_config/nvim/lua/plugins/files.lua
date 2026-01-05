@@ -1,7 +1,7 @@
 vim.pack.add { { src = "https://github.com/mikavilpas/yazi.nvim" } }
 
 -- Next, map a key to open yazi.nvim
-vim.keymap.set("n", "-", function()
+vim.keymap.set("n", "<leader>-", function()
   require("yazi").yazi()
 end)
 
