@@ -11,6 +11,14 @@ vim.pack.add {
 require("neotest").setup {
   adapters = {
     require "neotest-jest",
+    -- {
+    --       jestCommand = "npm test --",
+    --       jestConfigFile = "jest.config.js",
+    --       env = { CI = true },
+    --       cwd = function()
+    --         return vim.fn.getcwd()
+    --       end,
+    --     }
     require "neotest-vitest",
     require("neotest-playwright").adapter {
       options = {

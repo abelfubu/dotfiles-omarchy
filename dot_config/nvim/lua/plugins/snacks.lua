@@ -2,9 +2,8 @@ vim.pack.add { { src = "https://github.com/folke/snacks.nvim" } }
 
 require("snacks").setup {
   statuscolumn = { enabled = true },
-  explorer = {
-    replace_netrw = true,
-  },
+  explorer = { replace_netrw = true },
+  zen = { toggles = { dim = false } },
   picker = {
     ui_select = true,
     formatters = {
@@ -26,6 +25,13 @@ require("snacks").setup {
 
 -- Snacks
 local snacks = {
+  {
+    "<leader>th",
+    function()
+      require("utils.ui.change_theme").change_theme()
+    end,
+    desc = "Change Theme",
+  },
   {
     "<leader><space>",
     function()
@@ -500,6 +506,6 @@ for _, keymap in ipairs(snacks) do
     keymap.mode or "n",
     keymap[1],
     keymap[2],
-    { desc = keymap.desc }
+    { desc = keymap.desc, remap = true }
   )
 end

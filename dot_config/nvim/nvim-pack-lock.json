@@ -21,6 +21,10 @@
       "rev": "206011a8bc5078a02560d5c44177e9849e8f8d6c",
       "src": "https://github.com/github/copilot.vim"
     },
+    "diffview.nvim": {
+      "rev": "4516612fe98ff56ae0415a259ff6361a89419b0a",
+      "src": "https://github.com/sindrets/diffview.nvim"
+    },
     "flash.nvim": {
       "rev": "fcea7ff883235d9024dc41e638f164a450c14ca2",
       "src": "https://github.com/folke/flash.nvim"
@@ -125,10 +129,6 @@
     "ui": {
       "rev": "ebf58649bc5c759ee6c730c87d8d2d4dd4124c0d",
       "src": "https://github.com/nvchad/ui"
-    },
-    "volt": {
-      "rev": "620de1321f275ec9d80028c68d1b88b409c0c8b1",
-      "src": "https://github.com/nvchad/volt"
     },
     "yazi.nvim": {
       "rev": "e0394785918dc391e9d2e863a15f3b5caf033747",

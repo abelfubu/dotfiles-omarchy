@@ -55,3 +55,10 @@ alias fzed='zed $(fzf)'
 alias gg='lazygit'
 alias dd='lazydocker'
 alias ss='lazysql'
+
+# bun completions
+[ -s "/Users/abeldelafuente/.bun/_bun" ] && source "/Users/abeldelafuente/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -1,11 +1,18 @@
-local utils = require("nvchad.stl.utils").separators.round
+local ui_utils = require "utils.ui.statusline_item"
 
 local M = {}
 
+M.statusline_item_colors = {
+  green = { hl = "StatusLineIconGreen", sp = "StatusLineIconGreenSp" },
+  orange = { hl = "StatusLineIconOrange", sp = "StatusLineIconOrangeSp" },
+  blue = { hl = "StatusItemIconBlue", sp = "StatusItemIconBlueSp" },
+  disabled = { hl = "StatusItemDisabled", sp = "StatusItemDisabledSp" },
+}
+
 M.base46 = {
-  theme = "flexoki-light",
+  theme = "aylin",
   transparency = true,
-  theme_toggle = { "flexoki-light", "everforest" },
+  theme_toggle = { "flexoki-light", "aylin" },
   hl_override = {
     ["@keyword"] = { italic = true },
     ["@keyword.return"] = { italic = true },
@@ -17,7 +24,7 @@ M.base46 = {
     ["@comment"] = { italic = true },
     ["@boolean"] = { italic = true },
     ["@punctuation.bracket"] = { fg = "#777777" },
-    TbBufOff = { fg = "lightbg" },
+    TbBufOff = { fg = "grey" },
     TbBufOn = { fg = "blue" },
   },
   hl_add = {
@@ -27,14 +34,14 @@ M.base46 = {
     DiagnosticUnderlineWarn = { undercurl = true, sp = "#ffcb6b" },
     DiagnosticUnderlineInfo = { undercurl = true, sp = "#82aaff" },
     DiagnosticUnderlineHint = { undercurl = true, sp = "#c3e88d" },
-    RecordingSp = { bg = "lightbg", fg = "blue" },
-    RecordingBg = { bg = "blue", fg = "black2" },
+    StatusItemIconBlueSp = { bg = "lightbg", fg = "blue" },
+    StatusItemIconBlue = { bg = "blue", fg = "black2" },
     StatusItemDisabled = { fg = "grey", bg = "black" },
     StatusItemDisabledSp = { bg = "lightbg", fg = "black" },
-    FormatEnabled = { bg = "green", fg = "black2" },
-    FormatEnabledSp = { fg = "green", bg = "lightbg" },
-    OrganizeImportsEnabled = { bg = "orange", fg = "black2" },
-    OrganizeImportsEnabledSp = { fg = "orange", bg = "lightbg" },
+    StatusLineIconGreen = { bg = "green", fg = "black2" },
+    StatusLineIconGreenSp = { fg = "green", bg = "lightbg" },
+    StatusLineIconOrange = { bg = "orange", fg = "black2" },
+    StatusLineIconOrangeSp = { fg = "orange", bg = "lightbg" },
     GutterMarksLocal = { fg = "red" },
     GutterMarksGlobal = { fg = "green" },
     GutterMarksSpecial = { fg = "orange" },
@@ -43,6 +50,7 @@ M.base46 = {
 
 M.ui = {
   statusline = {
+    separator_style = "block",
     order = {
       "mode",
       "file",
@@ -60,32 +68,29 @@ M.ui = {
     modules = {
       recording = function()
         local rec = vim.fn.reg_recording()
-        if rec ~= "" then
-          local icon = "%#RecordingBg#" .. "󰄀 "
-          local name = "%#St_cwd_text#" .. " Register @" .. rec .. " "
-          return ("%#RecordingSp#" .. utils.left .. icon .. name)
-        end
-        return ""
+
+        return ui_utils.create_statusline_item {
+          color = "blue",
+          icon = "󰄀 ",
+          text = "Register @" .. rec,
+          visible = rec ~= "",
+        }
       end,
       format = function()
-        local color = _G.format_on_save and "%#FormatEnabled#"
-          or "%#StatusItemDisabled#"
-        local icon = color .. " "
-        local name = "%#St_cwd_text#" .. " format "
-        local separator_color = _G.format_on_save and "%#FormatEnabledSp#"
-          or "%#StatusItemDisabledSp#"
-        return (separator_color .. utils.left .. icon .. name)
+        return ui_utils.create_statusline_item {
+          color = "green",
+          icon = " ",
+          text = "format",
+          enabled = _G.format_on_save,
+        }
       end,
       organizeImports = function()
-        local color = _G.organize_imports_on_save
-            and "%#OrganizeImportsEnabled#"
-          or "%#StatusItemDisabled#"
-        local icon = color .. " "
-        local name = "%#St_cwd_text#" .. " imports "
-        local separator_color = _G.organize_imports_on_save
-            and "%#OrganizeImportsEnabledSp#"
-          or "%#StatusItemDisabledSp#"
-        return (separator_color .. utils.left .. icon .. name)
+        return ui_utils.create_statusline_item {
+          color = "orange",
+          icon = " ",
+          text = "imports",
+          enabled = _G.organize_imports_on_save,
+        }
       end,
     },
   },

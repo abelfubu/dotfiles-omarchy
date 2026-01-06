@@ -1,5 +1,8 @@
 --- @diagnostic disable: param-type-mismatch
 vim.pack.add { { src = "https://github.com/lewis6991/gitsigns.nvim" } }
+vim.pack.add { { src = "https://github.com/sindrets/diffview.nvim" } }
+
+require("diffview").setup {}
 
 require("gitsigns").setup {
   current_line_blame = false,
