@@ -30,7 +30,7 @@
       "src": "https://github.com/folke/flash.nvim"
     },
     "gitsigns.nvim": {
-      "rev": "6bd29494e3f79ff08be1d35bc1926ed23c22ed9a",
+      "rev": "dfac404ac94b0eb1461bd7da32279e16950dfd67",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "kulala.nvim": {
@@ -53,10 +53,6 @@
       "rev": "bfb26d9072670c3aaefab0f53024b2f3729c8083",
       "src": "https://github.com/nvim-mini/mini.ai"
     },
-    "mini.extra": {
-      "rev": "673633b97b64292c82d473ea2bd31b767dbe3907",
-      "src": "https://github.com/nvim-mini/mini.extra"
-    },
     "mini.files": {
       "rev": "22c64f010eef047ed270e29e7cc266cd4740787e",
       "src": "https://github.com/nvim-mini/mini.files"
@@ -68,10 +64,6 @@
     "mini.pairs": {
       "rev": "d5a29b6254dad07757832db505ea5aeab9aad43a",
       "src": "https://github.com/nvim-mini/mini.pairs"
-    },
-    "mini.pick": {
-      "rev": "8cb40ee55dd156957b1116eded6135e6aeaa078b",
-      "src": "https://github.com/nvim-mini/mini.pick"
     },
     "mini.surround": {
       "rev": "cc7b9d0a056b5fa6915ffac1cb91f29bf7c96f69",
@@ -131,7 +123,7 @@
       "src": "https://github.com/nvchad/ui"
     },
     "yazi.nvim": {
-      "rev": "e0394785918dc391e9d2e863a15f3b5caf033747",
+      "rev": "b5d1bfe0a0c3a4c7f3b74b6588d508b87fa3ae4e",
       "src": "https://github.com/mikavilpas/yazi.nvim"
     }
   }
