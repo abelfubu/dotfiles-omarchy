@@ -18,7 +18,7 @@
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "copilot.vim": {
-      "rev": "206011a8bc5078a02560d5c44177e9849e8f8d6c",
+      "rev": "a12fd5672110c8aa7e3c8419e28c96943ca179be",
       "src": "https://github.com/github/copilot.vim"
     },
     "diffview.nvim": {
